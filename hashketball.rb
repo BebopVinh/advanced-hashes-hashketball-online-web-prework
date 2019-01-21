@@ -134,7 +134,6 @@ def big_shoe_rebounds
           shoe_score = [:players]
           binding.pry
         end
-        end
       end
     end
   end
