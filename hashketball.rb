@@ -140,8 +140,7 @@ def big_shoe_rebounds
           binding.pry
           shoe_score = team_val[:players][:rebounds]
         end
-      end
-      end
+
     end
   end
   binding.pry
