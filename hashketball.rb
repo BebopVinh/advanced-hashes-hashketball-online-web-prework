@@ -39,6 +39,13 @@ def num_points_scored(player)
             if player.upcase == key.upcase
             points_scored = value[:points]
             end
+  game_hash.each_value do |team_stats|
+    team_stats.each do |attribute, attribute_val|
+      binding.pry
+      if attribute_val == :players
+        attribute_val.each do |key, value|
+          if player.upcase == key.upcase
+          points_scored = value[:points]
           end
         end
       end
@@ -129,9 +136,9 @@ def big_shoe_rebounds
             biggest_shoe = value[:shoe]
           end
         end
-        if atr_val[:shoe] = biggest_shoe
-          shoe_score = atr_val[:rebounds]
+        if team_val[:players][:shoe] == biggest_shoe
           binding.pry
+          shoe_score = team_val[:players][:rebounds]
         end
       end
     end
