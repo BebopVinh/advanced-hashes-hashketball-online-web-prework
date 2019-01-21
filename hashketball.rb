@@ -139,7 +139,6 @@ def big_shoe_rebounds
       end
     end
   end
-end
   binding.pry
 shoe_score
 end
