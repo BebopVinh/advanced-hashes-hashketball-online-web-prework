@@ -129,9 +129,10 @@ def big_shoe_rebounds
             biggest_shoe = value[:shoe]
           end
         end
-        if atr_val[:shoe] = biggest_shoe
-          shoe_score = atr_val[:rebounds]
-          binding.pry
+
+        if [:players][:shoe] == biggest_shoe
+          shoe_score = [:players]
+        end
         end
       end
     end
