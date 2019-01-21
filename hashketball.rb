@@ -37,15 +37,8 @@ def num_points_scored(player)
         if atr_val.keys.include? (player)
           atr_val.each do |key, value|
             if player.upcase == key.upcase
-              points_scored = value[:points]
+            points_scored = value[:points]
             end
-  game_hash.each_value do |team_stats|
-    team_stats.each do |attribute, attribute_val|
-      binding.pry
-      if attribute_val == :players
-        attribute_val.each do |key, value|
-          if player.upcase == key.upcase
-          points_scored = value[:points]
           end
         end
       end
@@ -125,15 +118,24 @@ def player_stats(player_input)
 end
 
 
-# def big_shoe_rebounds
-#   biggest_shoe = 0
-#   shoe_score = 0
-#   game_hash.each_value do |team_val|
-#     team_val.each do |attribute, atr_val|
-#       if attribute == :players
-#         atr_val.each do |key, value|
-#           if value[:shoe] > biggest_shoe
-#             biggest_shoe = value[:shoe]
-#           end
-#         end
-#       end
+def big_shoe_rebounds
+  biggest_shoe = 0
+  shoe_score = 0
+  game_hash.each_value do |team_val|
+    team_val.each do |attribute, atr_val|
+      if attribute == :players
+        atr_val.each do |key, value|
+          if value[:shoe] > biggest_shoe
+            biggest_shoe = value[:shoe]
+          end
+        end
+        if atr_val[:shoe] = biggest_shoe
+          shoe_score = atr_val[:rebounds]
+          binding.pry
+        end
+      end
+    end
+  end
+  binding.pry
+shoe_score
+end
